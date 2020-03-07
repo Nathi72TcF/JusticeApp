@@ -1,0 +1,33 @@
+
+<ion-header [translucent]="true"> 
+  <ion-toolbar>
+
+  <ion-title>
+    Register
+  </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+<ion-header collapse="condense">
+</ion-header>
+
+
+
+<ion-card *ngFor='register Lawyers'>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="../../assets/images/{{ cat.pic }}">
+    </ion-avatar>
+    <ion-label>
+      <h4>{{ cat.name }}</h4>
+      <p>{{ cate.id }}</p>
+    </ion-label>
+    <ion-button color="success" [routerLink]="['/register', cat.id]">Register</ion-button>
+  </ion-item>
+</ion-card>
+
+</ion-content>
+

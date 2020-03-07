@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>userreport</ion-title>
+    <ion-item slot="end">
+      <ion-label>Select a Language</ion-label>
+      <ion-select placeholder="Select Your Language">
+        <ion-select-option value="f">English</ion-select-option>
+        <ion-select-option value="m">IsiZulu</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card >
+    <ion-avatar >
+      <img *ngIf="!image" src="../../assets/images/Murder.jpg" alt=""> 
+      <input id="disapear" class="image-upload" type="file" accept="image/*" (change)="changeListener($event)">
+    </ion-avatar><br>
+    <br>
+    <ion-item>
+      <ion-label position="floating">Location</ion-label>
+    <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="floating">State your Case</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Im having this</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" type="text-area">My case is this long</ion-label>
+    <!-- <ion-input></ion-input> -->
+    <ion-textarea rows="6"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" type="Date">Date n time</ion-label>
+    <ion-datetime display-timezone="utc"></ion-datetime>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item align="center">
+    <ion-button color="success">Login</ion-button>
+  </ion-item >
+  </ion-card>
+</ion-content>

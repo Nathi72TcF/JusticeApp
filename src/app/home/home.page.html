@@ -1,20 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+
+<ion-header [translucent]="true"> 
+    <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      Home
     </ion-title>
-  </ion-toolbar>
+    <ion-item slot="end">
+      <ion-label>Select a Language</ion-label>  
+      <ion-select (ionChange)="Observationmethodz($event)" [(ngModel)]="observationmethod">
+        <ion-select-option value="0">English</ion-select-option>
+        <ion-select-option value="1">IsiZulu</ion-select-option>
+        <ion-select-option value="m">Sepedi</ion-select-option>
+        <ion-select-option value="d">IsiXhosa</ion-select-option>
+        <ion-select-option value="s">Venda</ion-select-option>
+        <ion-select-option value="a">Afrikaans</ion-select-option>
+        <ion-select-option value="z">IsiNdebele</ion-select-option>
+        <ion-select-option value="x">IsiSwati</ion-select-option>
+      </ion-select>
+      
+    </ion-item>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card>
+      <ion-input placeholder="Search for Law"></ion-input>
+    </ion-card>
+    <ion-item>
+      <img src="./../../assets/images/hummer.jpg" class="img">
+    </ion-item>
+  
+    <ion-card>
+      <ion-card *ngFor='let cat of Categories'>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img class="img" src="../../assets/images/{{ cat.pic }}">
+          </ion-avatar>
+          <ion-label>
+            <h2><b>{{ cat.name }}</b></h2>
+            <p>{{ cat.id }}</p>
+          </ion-label>
+          <ion-button color="success" [routerLink]="['/subcategory', cat.id]">View More</ion-button>
+        </ion-item>
+      </ion-card>
+    </ion-card>
+  </ion-card>
+
 </ion-content>
+

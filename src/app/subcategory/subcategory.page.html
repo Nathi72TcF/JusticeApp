@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Civil Law</ion-title>
+    <ion-item slot="end">
+      <ion-label>Select a Language</ion-label>
+      <ion-select>
+        <ion-select-option value="f">English</ion-select-option>
+        <ion-select-option value="m">IsiZulu</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <ion-card>
+    <p align="center">
+      Civil law is a body of rules that defines and protects the private rights of<br>
+      citizens, offers legal remedies that may be sought in a dispute, and covers <br>
+      areas of law such as contracts, torts, property and family law. Civil law is <br>
+      derived from the laws of ancient Rome which used doctrines to develop a <br>
+      code that determined how legal issues would be decided. To explore this concept, <br>
+      consider the following civil law definition.
+    </p>
+  </ion-card>
+
+  <ion-card *ngFor='let cat of Categories'>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/images/{{ cat.pic }}">
+      </ion-avatar>
+      <ion-label>
+        <h4>{{ cat.name }}</h4>
+        <!-- <p>{{ cat.id }}</p> -->
+      </ion-label>
+
+      <ion-button color="success" [routerLink]="['/familylaw', cat.id]">View More</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-content>

@@ -1,0 +1,47 @@
+
+<ion-header [translucent]="true"> 
+    <ion-toolbar color="primary">
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-item slot="end">
+      <ion-label>Select a Language</ion-label>  
+      <ion-select (ionChange)="Observationmethodz($event)" [(ngModel)]="observationmethod">
+        <ion-select-option value="0">English</ion-select-option>
+        <ion-select-option value="1">IsiZulu</ion-select-option>
+        <ion-select-option value="7">Sepedi</ion-select-option>
+        <ion-select-option value="8">IsiXhosa</ion-select-option>
+        <ion-select-option value="4">Venda</ion-select-option>
+        <ion-select-option value="5">Afrikaans</ion-select-option>
+        <ion-select-option value="2">IsiNdebele</ion-select-option>
+        <ion-select-option value="6">IsiSwati</ion-select-option>
+      </ion-select>
+    </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <ion-card>
+    <ion-input placeholder="Search for Law"></ion-input>
+  </ion-card>
+
+  <ion-card>
+    <ion-card *ngFor='let cat of Categories'>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img class="img" src="../../assets/images/{{ cat.pic }}">
+        </ion-avatar>
+        <ion-label>
+          <h2><b>{{ cat.name }}</b></h2>
+          <p>{{ cat.id }}</p>
+        </ion-label>
+        <ion-button color="success" [routerLink]="['/subcategory', cat.id]">Buka Okuningi</ion-button>
+      </ion-item>
+    </ion-card>
+  </ion-card>
+
+</ion-content>
+

@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="container" align="center">
+    <div class="leftwave">
+      <!-- <img id="wave" src="../../assets/loginwave.svg"> -->
+</div>
+    <img id="grocery" src="../../assets/grocery.svg">
+
+    <form class="login">
+            
+    
+      <div class="left">
+        <div class="logo">
+          <img src="../../assets/images/FamilyLaw.jpg"><span><h3>Accessible & lite law</h3></span>
+        </div>
+        <div class="middle">
+          <P>Welcome back, Please login to your account</P>
+        
+            <ion-input placeholder="Enter email" ></ion-input>
+            <div class="error" >
+        <div class="messages">
+       <!-- <p class="errors">Please enter a valid email address.</p>  -->
+        </div>
+      </div>
+
+            <ion-input placeholder="Enter password" type='password' ></ion-input>
+            <p id="password" (click)="resetepassword()">Forgot Password</p>
+            <!-- <button fill="clear" (click)="presentModal()" ion-button>Forgot Password</button> -->
+
+            <div class="error">
+            <div class="messages">
+            <!-- <p class="errors">Your password is incorrect.</p> -->
+            </div>
+            </div>
+            <!-- <button [routerLink]="['/userreport']" ion-button>Login</button> -->
+            <ion-button [routerLink]="['/userreport']" color="success">Login</ion-button>
+        </div>
+     
+      </div>
+ 
+
+      <div class="right">
+ 
+      </div>
+ 
+  </form>
+</div>
+
+  </ion-content>
