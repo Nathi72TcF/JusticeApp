@@ -27,6 +27,10 @@
   <ion-card>
     <ion-input placeholder="Search for Law"></ion-input>
   </ion-card>
+  <ion-item>
+    <img src="./../../assets/images/hummer.jpg" class="img">
+  </ion-item>
+
 
   <ion-card>
     <ion-card *ngFor='let cat of Categories'>
@@ -36,7 +40,7 @@
         </ion-avatar>
         <ion-label>
           <h2><b>{{ cat.name }}</b></h2>
-          <p>{{ cat.id }}</p>
+          <!-- <p>{{ cat.id }}</p> -->
         </ion-label>
         <ion-button color="success" [routerLink]="['/subcategory', cat.id]">Buka Okuningi</ion-button>
       </ion-item>

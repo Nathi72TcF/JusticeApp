@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>userreport</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Seek Help</ion-title>
     <ion-item slot="end">
       <ion-label>Select a Language</ion-label>
-      <ion-select placeholder="Select Your Language">
+      <ion-select >
         <ion-select-option value="f">English</ion-select-option>
         <ion-select-option value="m">IsiZulu</ion-select-option>
       </ion-select>
@@ -12,36 +12,45 @@
 </ion-header>
 
 <ion-content>
-  <ion-card >
+
     <ion-avatar >
       <img *ngIf="!image" src="../../assets/images/Murder.jpg" alt=""> 
       <input id="disapear" class="image-upload" type="file" accept="image/*" (change)="changeListener($event)">
     </ion-avatar><br>
     <br>
     <ion-item>
-      <ion-label position="floating">Location</ion-label>
+      <ion-label position="floating">Name</ion-label>
     <ion-input></ion-input>
     </ion-item>
     <ion-item>
-    <ion-label position="floating">State your Case</ion-label>
+    <ion-label position="floating">Surname</ion-label>
     <ion-input></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Im having this</ion-label>
+    <ion-label position="floating">Phone Number</ion-label>
     <ion-input></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating" type="text-area">My case is this long</ion-label>
+    <ion-label position="floating" type="text-area">My Legal Challege</ion-label>
     <!-- <ion-input></ion-input> -->
     <ion-textarea rows="6"></ion-textarea>
   </ion-item>
   <ion-item>
-    <ion-label position="floating" type="Date">Date n time</ion-label>
+    <ion-label position="floating" type="text-area">My Current Legal Situation</ion-label>
+    <!-- <ion-input></ion-input> -->
+    <ion-textarea rows="6"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Im willing to pay this much (negotiation available)</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" type="Date">For how long</ion-label>
     <ion-datetime display-timezone="utc"></ion-datetime>
     <ion-input></ion-input>
   </ion-item>
   <ion-item align="center">
-    <ion-button color="success">Login</ion-button>
+    <ion-button color="success" (click)="presentAlertConfirm()">Send</ion-button>
   </ion-item >
-  </ion-card>
+  
 </ion-content>

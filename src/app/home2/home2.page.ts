@@ -12,11 +12,11 @@ export class Home2Page implements OnInit {
   Observationmethod;
 
   Categories = [
-    {id: 'CVLL', name: 'umthetho wezomphakathi', pic: 'Civil-Law.jpg'},
+    {id: 'CVLL', name: 'Umthetho Wezomphakathi', pic: 'Civil-Law.jpg'},
     {id: 'CRLL', name: 'Umthetho Wobugebengu', pic: 'criminal-law.jpg'},
-    {id: 'STRR', name: 'Statute Law', pic: 'statu.jpg'},
-    {id: 'CMML', name: 'Umthetho wesitatimende', pic: 'common.jpg'},
-    {id: 'CVLL', name: 'Equity Law', pic: 'Civil-Law.jpg'},
+    {id: 'STRR', name: 'Umthetho Umthetho', pic: 'statu.jpg'},
+    {id: 'CMML', name: 'Umthetho Wesitatimende', pic: 'common.jpg'},
+    {id: 'CVLL', name: 'Umthetho Womnotho', pic: 'Civil-Law.jpg'},
     {id: 'CRLL', name: 'Umthetho Wokulingana', pic: 'criminal-law.jpg'},
     {id: 'STRR', name: 'Umthetho Wezemvelo', pic: 'statu.jpg'},
     {id: 'CMML', name: 'Umthetho Wezempilo', pic: 'common.jpg'},

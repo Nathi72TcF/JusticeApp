@@ -1,0 +1,39 @@
+<ion-header [translucent]="true"> 
+  <ion-toolbar color="primary">
+  <ion-title>
+    Home
+  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-header collapse="condense">
+
+</ion-header>
+
+<!-- <ion-card> -->
+  
+  <!-- <ion-item>
+    <img src="./../../assets/images/hummer.jpg" class="img">
+  </ion-item> -->
+
+  <!-- <ion-card> -->
+    <ion-card *ngFor='let cat of Categories'>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img class="img" src="../../assets/images/people/{{ cat.pic }}">
+        </ion-avatar>
+        <ion-label>
+          <h2><b>{{ cat.name }}</b></h2>
+          <p><b>Location:</b> {{ cat.location }}</p>
+          <p><b>Amount Willing to Pay</b> R{{ cat.Amount }}</p>
+          <p><b>Case Summary </b>:{{ cat.Case }}</p>
+        </ion-label>
+        <ion-button color="success" [routerLink]="['/lawviewclient', cat.id]">View More</ion-button>
+      </ion-item>
+    </ion-card>
+  <!-- </ion-card> -->
+<!-- </ion-card> -->
+
+</ion-content>
+

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>View Client profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content *ngFor='let cat of Categories'>
+  <ion-card align="center">
+    <img src="./../../assets/images/people/{{ cat.pic }}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{ cat.name }}</ion-card-subtitle>
+      <ion-card-title>{{ cat.Location }}</ion-card-title> -->
+
+<ion-grid>
+  <ion-row class="row" wrap>
+    <ion-col width-33 *ngFor="let cat of Categories">
+      <img src="./../../assets/images/people/{{ cat.pic }}" /><br>
+      <ion-card-subtitle>{{ cat.name }}</ion-card-subtitle><br>
+      <ion-card-title>
+        Location: {{ cat.location }}
+      </ion-card-title>
+      <ion-card-content><b>
+        Case: {{ cat.Case }}<br>
+        Willing to pay {{ cat.Amount }}</b>
+      </ion-card-content>
+      </ion-col>
+  </ion-row>
+</ion-grid>      
+    
+  <!-- </ion-card-header>
+    <ion-card-content>
+      {{ cat.Summary }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>-->
+
+

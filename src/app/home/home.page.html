@@ -23,6 +23,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
+
   </ion-header>
 
   <ion-card>
@@ -41,7 +42,7 @@
           </ion-avatar>
           <ion-label>
             <h2><b>{{ cat.name }}</b></h2>
-            <p>{{ cat.id }}</p>
+            <!-- <p>{{ cat.id }}</p> -->
           </ion-label>
           <ion-button color="success" [routerLink]="['/subcategory', cat.id]">View More</ion-button>
         </ion-item>

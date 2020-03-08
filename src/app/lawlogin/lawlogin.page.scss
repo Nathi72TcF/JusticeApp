@@ -126,12 +126,12 @@ align-items: center;
 
 .right {
    // border: 1px solid blue;
-    background-image: url('../../assets/images/FamilyLaw.jpg');
+    background-image: url('../../assets/images/Prowse-1-1.jpg');
     width: 80%;
     height: 100%;
     // background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: 120%;
 }
 
 
@@ -173,13 +173,11 @@ align-items: center;
                   letter-spacing: 0.5px;
               }
               ion-input {
-                           //    border: 1px solid blue;
-                               padding: 1.1% !important;
-                               font-size: 0.7em;
-                               padding-left: 2% !important;
+                 //    border: 1px solid blue;
+                 padding: 1.1% !important;
+                 font-size: 0.7em;
+                 padding-left: 2% !important;
               }
-     
-              
               button {
                  // border: 1px solid green;
                   position: absolute;

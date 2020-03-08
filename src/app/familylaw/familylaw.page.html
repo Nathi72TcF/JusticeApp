@@ -12,7 +12,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-card align="center">
+  <ion-card >
+
+    <div align='center'>
+      <img src="../../assets/images/family2.jpg">
+    </div>
     <ion-card>
       <p align="center"><i>
         Family law is the branch of civil law that deals with marriage,
@@ -28,16 +32,18 @@
       </i></p>
     </ion-card>
   
-    <ion-card align="center">
-      <ion-card-content>
+    <ion-card >
+      <ion-card-content align="center"><u>
         Steps to take when Lodging a Case
-      </ion-card-content>
+      </u></ion-card-content>
       <ion-card-title>
-        <ion-icon name="book-outline"></ion-icon>
+        <ion-icon name="heckmark-outline"></ion-icon>Carry your Identity Competion<br>
+        <ion-icon name="heckmark-outline"></ion-icon>write your statement down if you can<br>
+        <ion-icon name="heckmark-outline"></ion-icon>Pictures of scene of the crime scene
       </ion-card-title>
     </ion-card>
   
-    <ion-card  align="center">
+    <ion-card align="center">
       <ion-card-content >
         <b><u>Your Human Rights</u></b>
       </ion-card-content>
@@ -54,56 +60,55 @@
     </ion-card>
   
     <ion-card >
-      <ion-card-content align="center">
+      <ion-card-content align="center"><u>
         Types of Family Law dispute
-      </ion-card-content>
+      </u></ion-card-content>
       <ion-card-title >
-        <ion-icon name="book-outline"></ion-icon>Marriage<br>
-        <ion-icon name="book-outline"></ion-icon>Divorce<br>
-        <ion-icon name="book-outline"></ion-icon>Child Custody<br>
-        <ion-icon name="book-outline"></ion-icon>Adoption<br>
-        
+        <ion-icon name="heckmark-outline"></ion-icon>Marriage<br>
+        <ion-icon name="heckmark-outline"></ion-icon>Divorce<br>
+        <ion-icon name="heckmark-outline"></ion-icon>Child Custody<br>
+        <ion-icon name="heckmark-outline"></ion-icon>Adoption<br>
       </ion-card-title>
     </ion-card>
   
     <ion-card >
-      <ion-card-content >
+      <ion-card-content align="center"><u>
         Mendotory Documents required to Carry when Lodging a Case<br>
         (with earch given dispute)
-      </ion-card-content>
+      </u></ion-card-content>
       <ion-card-title>
-        <ion-icon name="checkmark-outline"></ion-icon>ID<br>
-        <ion-icon name="checkmark-outline"></ion-icon>Proof of Adentication<br>
-        <ion-icon name="checkmark-outline"></ion-icon>Proof of Resident<br>
-        <ion-icon name="checkmark-outline"></ion-icon>Prepare your case vebally  <br>
+        <ion-icon name="heckmark-outline"></ion-icon>ID<br>
+        <ion-icon name="heckmark-outline"></ion-icon>Proof of Adentication<br>
+        <ion-icon name="heckmark-outline"></ion-icon>Proof of Resident<br>
+        <ion-icon name="heckmark-outline"></ion-icon>Prepare your case vebally<br>
       </ion-card-title>
     </ion-card>
   
     <ion-card >
-      <ion-card-content > 
+      <ion-card-content align="center"><u>
         Estimated Costs
-      </ion-card-content>
+      </u></ion-card-content>
       <ion-card-title class="padding">
         <object class="embed-video" [data]="url"></object>
       </ion-card-title>
     </ion-card>
   
-    <ion-card >
-      <ion-card-content align="center">
-        Advance Help
-      </ion-card-content>
-      <ion-card-title>
-        Name of Company: Hill
-        website: 
+    <!-- <ion-card >
+      <ion-card-content align="center"><u>
+        Other Reference Help
+      </u></ion-card-content>
+      <ion-card-title>    
+        <p>Name of Company: Hill</p>
+        <p>website: www.innovationjustice.co.za</p>
       </ion-card-title>
-    </ion-card>
+    </ion-card> -->
   </ion-card>
 
   <ion-footer align="center">
     <!-- <ion-toolbar> -->
-       <ion-button color="primary" [routerLink]="['/seekhelpform']">Seek Help</ion-button>
-       <ion-button color="primary" [routerLink]="['/userlogin']">Save Document</ion-button>
-       <ion-button color="success" >Sign In</ion-button>
+       <ion-button color="primary" [routerLink]="['/userlogin']">Seek Help</ion-button>
+       <ion-button color="primary" (click)='presentAlertConfirm()'>Save Document</ion-button>
+       <ion-button color="success"  [routerLink]="['/lawlogin']">Sign In</ion-button>
     <!-- </ion-toolbar> -->
   </ion-footer>
   

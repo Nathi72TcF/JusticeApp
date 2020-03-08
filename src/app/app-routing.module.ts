@@ -11,7 +11,8 @@ const routes: Routes = [
   {
     path: 'familylaw/:id',
     loadChildren: () => import('./familylaw/familylaw.module').then( m => m.FamilylawPageModule)
-  },  {
+  },
+  {
     path: 'seekhelpform',
     loadChildren: () => import('./seekhelpform/seekhelpform.module').then( m => m.SeekhelpformPageModule)
   },
@@ -30,6 +31,18 @@ const routes: Routes = [
   {
     path: 'home2',
     loadChildren: () => import('./home2/home2.module').then( m => m.Home2PageModule)
+  },
+  {
+    path: 'lawlogin',
+    loadChildren: () => import('./lawlogin/lawlogin.module').then( m => m.LawloginPageModule)
+  },
+  {
+    path: 'lawhome',
+    loadChildren: () => import('./lawhome/lawhome.module').then( m => m.LawhomePageModule)
+  },
+  {
+    path: 'lawviewclient/:id',
+    loadChildren: () => import('./lawviewclient/lawviewclient.module').then( m => m.LawviewclientPageModule)
   },
 
 
